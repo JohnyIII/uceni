@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="uceni:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/uceni_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="uceni/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="uceni" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
