@@ -68,6 +68,7 @@ public class UserService {
         roles.add(roleRepository.findById(1));
         user.setRoles(roles);
         System.out.println("hello");
+        System.out.println("hmm");
         userRepository.save(user);
     }
 }
