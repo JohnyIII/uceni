@@ -3,16 +3,16 @@ package cz.pavelchraska.jba.entity;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by Pajut on 31.10.2016.
- */
 @Entity
+@Table(name = "USER")
+@NamedQuery(name = "User.getById", query = "select u from User u where u.id = :id")
 public class User {
 
     @Id
     @GeneratedValue
     private Integer id;
 
+    @Column(name = "NAME")
     private String name;
 
     private String email;
