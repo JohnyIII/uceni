@@ -60,6 +60,8 @@
                         </li>
                     </security:authorize>
                     <security:authorize access="isAuthenticated()">
+                        <li class="${current=='users' ? 'active' : ''}"><a
+                                href='<spring:url value="/account.html" />'>My account</a></li>
                         <li><a href='<spring:url value="/logout" />'>Logout</a></li>
                     </security:authorize>
 

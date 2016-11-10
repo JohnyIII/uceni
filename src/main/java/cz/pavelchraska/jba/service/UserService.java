@@ -12,4 +12,8 @@ public interface UserService
     User findOneWithBlogs(int id);
 
     void save(User user);
+
+    User findOneWithBlogs(String name);
+
+    void delete(int id);
 }
