@@ -23,7 +23,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-
+    <script type="text/javascript"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
     <title><tiles:getAsString name="title"/></title>
 </head>
 <body>
@@ -60,7 +61,7 @@
                         </li>
                     </security:authorize>
                     <security:authorize access="isAuthenticated()">
-                        <li class="${current=='users' ? 'active' : ''}"><a
+                        <li class="${current=='account' ? 'active' : ''}"><a
                                 href='<spring:url value="/account.html" />'>My account</a></li>
                         <li><a href='<spring:url value="/logout" />'>Logout</a></li>
                     </security:authorize>

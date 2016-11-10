@@ -1,6 +1,10 @@
 package cz.pavelchraska.jba.entity;
 
+import org.hibernate.validator.constraints.Email;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
+
 import java.util.List;
 
 @Entity
@@ -13,14 +17,16 @@ public class User {
     private Integer id;
 
     @Column(name = "NAME")
+    @Size(min = 3, message = "Name must be at least 3 characters !")
     private String name;
 
+    @Email
     private String email;
 
+    @Size(min = 5, message = "Password must be at least 5 characters !")
     private String password;
 
     private boolean enabled;
-
 
 
     @ManyToMany
@@ -32,26 +38,22 @@ public class User {
 
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         return super.hashCode();
     }
 
     @Override
-    public boolean equals(Object obj)
-    {
+    public boolean equals(Object obj) {
         return super.equals(obj);
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException
-    {
+    protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return super.toString();
     }
 
